@@ -1,16 +1,73 @@
-# React + Vite
+# 🏋️ Fitness Sports Center Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive gym website built using React and Tailwind CSS. This project showcases a professional UI design with animations, interactive components, and user-friendly navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- Modern responsive UI design
+- Smooth animations using Framer Motion
+- Trainer showcase section
+- Testimonials section with glassmorphism design
+- Contact form with validation and email integration
+- Mobile-friendly navigation with full-screen menu
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React (Vite)
+- 🎨 Tailwind CSS
+- 🎞️ Framer Motion
+- 📧 EmailJS (for contact form)
+- 🧭 React Router DOM
+
+---
+
+## ⚙️ Setup Instructions
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+git clone https://github.com/your-username/fitness-website.git
+
+### 2. Navigate to the project folder
+cd frontend 
+
+### 3. Install dependencies
+npm install
+
+### 4. Run the development server
+npm run dev
+
+### 5. Open in browser
+http://localhost:5173
+
+
+---
+
+
+### 🔐 Environment Variables
+
+Create a .env file in the root folder and add:
+
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+
+---
+
+### 🌐 Live Demo
+
+👉 https://your-live-link.com
+
+---
+
+### 📌 Folder Structure
+src/
+ ├── components/
+ ├── pages/
+ ├── assets/
+ ├── data/
+ └── App.jsx
