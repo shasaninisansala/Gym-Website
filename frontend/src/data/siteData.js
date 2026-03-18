@@ -1,4 +1,4 @@
-import { Dumbbell, Users, Clock3, Trophy, Check, Award } from "lucide-react";
+import { Dumbbell, Users, Clock3, Trophy, Soup, Award } from "lucide-react";
 
 export const navLinks = [
   "Home",
@@ -33,7 +33,7 @@ export const services = [
     desc: "Boost your heart health and burn fat with high intensity cardio sessions led by energetic instructors.",
   },
   {
-    icon: Check,
+    icon: Soup,
     title: "Nutrition Coaching",
     desc: "Fuel your body correctly with expert meal planning and dietary advice tailored to your fitness goals.",
   },
@@ -45,18 +45,33 @@ export const trainers = [
     role: "Bodybuilding Pro",
     image:
       "https://static.vecteezy.com/system/resources/thumbnails/046/836/977/small/african-male-fitness-trainer-in-gym-fitness-and-wellness-african-american-coach-healthy-lifestyle-photo.jpg",
+    social: {
+      instagram: "https://instagram.com/alex",
+      facebook: "https://facebook.com/alex",
+      twitter: "https://twitter.com/alex",
+    },
   },
   {
     name: "Sarah Jenkins",
     role: "CrossFit Specialist",
     image:
       "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80",
+    social: {
+      instagram: "https://instagram.com/alex",
+      facebook: "https://facebook.com/alex",
+      twitter: "https://twitter.com/alex",
+    },
   },
   {
     name: "Marcus Thorne",
     role: "Strength Coach",
     image:
       "https://static.vecteezy.com/system/resources/thumbnails/046/836/942/small/young-bangladeshi-male-fitness-trainer-in-modern-gym-environment-suitable-for-health-and-wellness-promotions-exercise-tutorials-and-gym-advertisements-photo.jpg",
+    social: {
+      instagram: "https://instagram.com/alex",
+      facebook: "https://facebook.com/alex",
+      twitter: "https://twitter.com/alex",
+    },
   },
 ];
 

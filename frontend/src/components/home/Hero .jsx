@@ -38,7 +38,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="#services"
+              href="#membership"
               className="inline-flex h-[56px] items-center justify-center rounded-[24px] border border-white/20 bg-black/30 px-10 text-[18px] font-semibold text-white backdrop-blur-sm transition hover:border-yellow-400 hover:text-yellow-400"
             >
               View Plans
