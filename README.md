@@ -30,7 +30,7 @@ A modern and responsive gym website built using React and Tailwind CSS. This pro
 Follow these steps to run the project locally:
 
 ### 1. Clone the repository
-git clone https://github.com/your-username/fitness-website.git
+git clone https://github.com/shasaninisansala/Gym-Website.git
 
 ### 2. Navigate to the project folder
 cd frontend 
@@ -60,7 +60,7 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 ### 🌐 Live Demo
 
-👉 https://your-live-link.com
+👉 https://gym-website-orcin-alpha.vercel.app/
 
 ---
 
