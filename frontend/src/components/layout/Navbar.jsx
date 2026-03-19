@@ -1,17 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navLinks } from "../../data/siteData";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -19,32 +14,40 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
-        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5 lg:px-8">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-black/70 backdrop-blur-xl">
+        <div className="mx-auto flex h-[86px] max-w-[1400px] items-center justify-between pl-4 pr-4 lg:pl-6 lg:pr-6">
           <a href="#home" className="flex shrink-0 items-center">
             <img
               src="/logo.png"
               alt="Fitness Sports Center logo"
-              className="h-24 w-auto object-contain md:h-28"
+              className="h-[85px] w-auto object-contain"
             />
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-white">
+                Fitness
+              </p>
+              <p className="text-[10px] uppercase tracking-[0.35em] text-yellow-400">
+                Sports Center
+              </p>
+            </div>
           </a>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden flex-1 items-center justify-center gap-12 lg:flex">
             {navLinks.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="relative text-[16px] font-medium text-zinc-300 transition duration-300 hover:text-yellow-400"
+                className="text-[15px] font-medium text-white/90 transition hover:text-yellow-400"
               >
                 {item}
               </a>
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden shrink-0 lg:block">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-6 py-3 text-sm font-bold text-black transition duration-300 hover:scale-105 hover:bg-yellow-300"
+              className="inline-flex h-[42px] items-center justify-center rounded-full bg-yellow-400 px-8 text-[15px] font-semibold text-black transition hover:bg-yellow-300"
             >
               Join Now
             </a>
@@ -62,9 +65,7 @@ export default function Navbar() {
 
       <div
         className={`fixed inset-0 z-[999] lg:hidden transition-all duration-500 ${
-          isOpen
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+          isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
         <div
@@ -75,7 +76,7 @@ export default function Navbar() {
         />
 
         <div
-          className={`absolute inset-0 flex flex-col bg-[#050505]/95 px-6 pt-6 pb-10 transition-transform duration-500 ${
+          className={`absolute inset-0 flex flex-col bg-[#050505]/95 px-6 pb-10 pt-6 transition-transform duration-500 ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
@@ -102,15 +103,12 @@ export default function Navbar() {
           </div>
 
           <nav className="mt-16 flex flex-1 flex-col justify-center gap-8">
-            {navLinks.map((item, index) => (
+            {navLinks.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setIsOpen(false)}
                 className="border-b border-white/5 pb-4 font-anton text-[34px] uppercase leading-none tracking-tight text-white transition duration-300 hover:translate-x-2 hover:text-yellow-400 sm:text-[42px]"
-                style={{
-                  transitionDelay: isOpen ? `${index * 60}ms` : "0ms",
-                }}
               >
                 {item}
               </a>
@@ -121,7 +119,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-yellow-400 px-6 py-4 text-base font-bold text-black transition duration-300 hover:bg-yellow-300"
+              className="inline-flex w-full items-center justify-center rounded-full bg-yellow-400 px-6 py-4 text-base font-bold text-black transition duration-300 hover:bg-yellow-300"
             >
               Join Now
             </a>
